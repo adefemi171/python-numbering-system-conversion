@@ -46,28 +46,31 @@ def toHex(n):
             outcome += str(hexMap[(n % 16)])#Converted the dictionary to string
             n = n // 16 #Integer division
       return outcome[: : -1]
-userInput = input("What Conversion will you like to perform? ")
+
 print (" Press 1 for Binary to Decimal Conversion ")
 print (" Press 2 for Decimal to Binary Conversion ")
 print (" Press 3 for HexaDecimal to Decimal Conversion ")
 print (" Press 4 for Decimal to HexaDecimal Conversion ")
+userInput = input("What Conversion will you like to perform? ")
 
-if userInput == 1:
+if userInput == "1":
       print("You have selected Binary to Decimal Conversion: ")
-      binNum = str(input ("Enter your Binary value:"))
+      binNum = str(input ("Enter your Binary value: "))
       print(binToDec(binNum))
-elif userInput == 2:
+elif userInput == "2":
       print("You have selected Decimal to Binary Conversion: ")
-      decNum = input ("Enter your Decimal value:")
+      decNum = input ("Enter your Decimal value: ")
       print(decToBin(decNum))
-elif userInput == 3:
+elif userInput == "3":
       print(" You have selected HexaDecimal to Decimal Conversion ")
       hexNum = str(input ("Enter Your HexaDecimal Letter: "))
       print(hexToDec(hexNum))
-elif userInput == 4:
+elif userInput == "4":
       print(" You have selected Decimal to HexaDecimal Conversion ")
       decToHex = input ("Enter Your Decimal Number: ")
       print(toHex(decToHex))
+else :
+      print("Input not found!")
 # a = '1010'
 # b = "ABCDEF"
 # c = (11259375)
